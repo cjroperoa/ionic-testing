@@ -16,13 +16,18 @@
         <ion-card-content>
           <ion-item>
             <ion-icon name="arrow-dropright"></ion-icon>
-            <ion-input inputmode="text" placeholder="Digite base" required="true"> </ion-input>
+            <ion-input placeholder="Digite base" [(ngModel)]="base"> </ion-input>
             <ion-icon name="arrow-dropright"></ion-icon>
-            <ion-input inputmode="text" placeholder="Digite altura" required="true"> </ion-input>
+            <ion-input placeholder="Digite altura" [(ngModel)]="altura"></ion-input>
           </ion-item>
-          <ion-button (click)="onClick()" expand="full" color="tertiary">
+          <ion-button (click)="getPerimeter()" expand="full" color="tertiary">
             Calcular
           </ion-button>
         </ion-card-content>
       </ion-card>
+      <ion-item>
+        <ion-label>
+          {{ rest }}
+        </ion-label>
+      </ion-item>
   </ion-content>
